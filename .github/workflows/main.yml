@@ -1,0 +1,33 @@
+name: Update Standupscore Collection
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Runs at 00:00 every Sunday
+  workflow_dispatch: # Allows manual trigger from the GitHub UI
+
+jobs:
+  update-collection:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Run update script
+      env:
+        STANDUPSCORE_EMAIL: ${{ secrets.STANDUPSCORE_EMAIL }}
+        STANDUPSCORE_PASSWORD: ${{ secrets.STANDUPSCORE_PASSWORD }}
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        COLLECTION_ID: ${{ secrets.COLLECTION_ID }}
+      run: python update_collection.py
