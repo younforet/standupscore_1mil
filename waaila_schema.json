@@ -1,0 +1,1935 @@
+{
+  "name": "Event Catalog Validation",
+  "groups": [
+    {
+      "name": "Addresses",
+      "contexts": {
+        "address_details_shown": {
+          "type": "object",
+          "description": "На мвеб отобразить если пользователь на экране детального ввода адреса. На десктоп отправлять вместе с view_map на доставке",
+          "additionalProperties": true
+        },
+        "address_mission_shown": {
+          "type": "object",
+          "description": "Показан bottom sheet “Варианты доставки",
+          "additionalProperties": true
+        },
+        "pin_store_pressed": {
+          "type": "object",
+          "description": "При тапе на магазин на карте. Или выбор магазина из списка",
+          "additionalProperties": true
+        },
+        "city_store_filter_pressed": {
+          "type": "object",
+          "description": "веб десктоп тап на фильтр городов",
+          "additionalProperties": true
+        },
+        "confirm_address": {
+          "type": "object",
+          "description": "выбран адрес из списка. Или выбран магазин если в адресах магазина",
+          "additionalProperties": true
+        },
+        "confirm_address_pressed": {
+          "type": "object",
+          "description": "Нажата кнопка Подтвердить адрес на экране адреса или карте   (речь идет об адресе доставки)   На вебе также  при нажатии на один из выбранных адресов т.к. здесь адрес меняется без доп, кнопки.",
+          "additionalProperties": true
+        },
+        "confirm_address_success": {
+          "type": "object",
+          "description": "Адрес подтверждён - успешный ответ от бэка",
+          "additionalProperties": true
+        },
+        "confirm_store": {
+          "type": "object",
+          "description": "тап на активную кнопку Готово или перейти к товарам    и тд на экране Мои адреса при активном табе Магазины самовывоз,      на веб десктоп также при переключении магазина",
+          "additionalProperties": true
+        },
+        "delete_store": {
+          "type": "object",
+          "description": "удаление магазина с адресов",
+          "additionalProperties": true
+        },
+        "edit_address_pressed": {
+          "type": "object",
+          "description": "нажата кнопка редактировать адрес",
+          "additionalProperties": true
+        },
+        "edit_address_success": {
+          "type": "object",
+          "description": "успешное редактирование адреса",
+          "additionalProperties": true
+        },
+        "format_store_filter_pressed": {
+          "type": "object",
+          "description": "веб десктоп тап на нажатия форматы магазина",
+          "additionalProperties": true
+        },
+        "outside_the_area": {
+          "type": "object",
+          "description": "Показан экран или надпись Адрес вне зоны доставки",
+          "additionalProperties": true
+        },
+        "search_address_pressed": {
+          "type": "object",
+          "description": "Выбран адрес из списка",
+          "additionalProperties": true
+        },
+        "search_address_shown": {
+          "type": "object",
+          "description": "Взаимодействие с полем поиска.   отправить событие если подсветился выпадающий список   на десктопе На мвеб и экран поиска на мвеб",
+          "additionalProperties": true
+        },
+        "unknown_address": {
+          "type": "object",
+          "description": "Если адрес не найден на карте. Раньше показывался попап данный адрес не найден. Теперь просто сообщение об ошибке.",
+          "additionalProperties": true
+        },
+        "view_address": {
+          "type": "object",
+          "description": "при открытии экрана мои адреса. На десктоп это показ всплывающего окна с адресами на мвеб экран с текущими адресами",
+          "additionalProperties": true
+        },
+        "view_map": {
+          "type": "object",
+          "description": "Показан экран с картой. Или списком адресов магазина при выбора магазина(для веба).   При смене режимов на карте, списком, доставка, самовывоза.   Отправлять событие с соответвующими параметрами",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "Cart",
+      "contexts": {
+        "erase_cart": {
+          "type": "object",
+          "description": "Корзина очищена (результат после тапа на очистку корзины + тап на очистку подкатегорий)",
+          "additionalProperties": true
+        },
+        "erase_cart_pressed": {
+          "type": "object",
+          "description": "Нажата кнопка 'Очистить корзину'",
+          "additionalProperties": true
+        },
+        "error_cart": {
+          "type": "object",
+          "description": "Ошибка корзины",
+          "additionalProperties": true
+        },
+        "view_cart": {
+          "type": "object",
+          "description": "Просмотр корзины",
+          "additionalProperties": true
+        },
+        "empty_predictive_cart": {
+          "type": "object",
+          "description": "Просмотр страницы \"Пока для вас нет рекомендованных товаров\"",
+          "additionalProperties": true
+        },
+        "last_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"К купленным товарам\" на странице \"Пока для вас нет рекомендованных товаров\"",
+          "additionalProperties": true
+        },
+        "predictive_cart_banner_pressed": {
+          "type": "object",
+          "description": "Переход по баннеру с предиктивной корзиной (переход происходит при клике по иконкам товаров в баннере или по кнопке \"Посмотреть\")",
+          "additionalProperties": true
+        },
+        "predictive_cart_banner_shown": {
+          "type": "object",
+          "description": "Показ баннера с предиктивной корзиной",
+          "additionalProperties": true
+        },
+        "predictive_cart_error": {
+          "type": "object",
+          "description": "Ошибка вывода подборки \"Товары для вас\"",
+          "additionalProperties": true
+        },
+        "agree_about_promocode_pressed": {
+          "type": "object",
+          "description": "Закрытие попапа 'Условия промокода'",
+          "additionalProperties": true
+        },
+        "apply_coupon": {
+          "type": "object",
+          "description": "Результат успешного применения промокода (с данными по корзине)",
+          "additionalProperties": true
+        },
+        "coupon_pressed": {
+          "type": "object",
+          "description": "Тап на поле промокода",
+          "additionalProperties": true
+        },
+        "info_about_promocode_pressed": {
+          "type": "object",
+          "description": "Тап на 'Показать полностью'/ 'Подробнее' / 'Условия промкода' - подробное описание в Условия промокода",
+          "additionalProperties": true
+        },
+        "info_about_promocode_shown": {
+          "type": "object",
+          "description": "Отображение попапа “Условия промокода”",
+          "additionalProperties": true
+        },
+        "request_coupon": {
+          "type": "object",
+          "description": "Запрос применения промокода (при получении результата применения промокода (CartPromocodeAdd))",
+          "additionalProperties": true
+        },
+        "view_coupon_pressed": {
+          "type": "object",
+          "description": "Состояние поля промокода",
+          "additionalProperties": true
+        },
+        "empty_share_cart_shown": {
+          "type": "object",
+          "description": "Показ ботомшита при пустой корзине (нет товаров в наличии)",
+          "additionalProperties": true
+        },
+        "error_share_cart": {
+          "type": "object",
+          "description": "Ошибки при попытке поделиться корзиной",
+          "additionalProperties": true
+        },
+        "onboarding_share_cart": {
+          "type": "object",
+          "description": "Показ онбординга для поделиться корзиной",
+          "additionalProperties": true
+        },
+        "send_items_to_cart_added": {
+          "type": "object",
+          "description": "Тап на кнопку добавления в корзину",
+          "additionalProperties": true
+        },
+        "send_items_to_cart_closed": {
+          "type": "object",
+          "description": "Закрытие ботомшита по добавлению в корзину (не сейчас/x)",
+          "additionalProperties": true
+        },
+        "send_items_to_cart_shown": {
+          "type": "object",
+          "description": "Тап на поделиться ссылкой",
+          "additionalProperties": true
+        },
+        "share_cart_closed": {
+          "type": "object",
+          "description": "Закрытие ботомшита",
+          "additionalProperties": true
+        },
+        "share_cart_pressed": {
+          "type": "object",
+          "description": "Тап на поделиться корзиной",
+          "additionalProperties": true
+        },
+        "share_cart_shown": {
+          "type": "object",
+          "description": "Открытие ботомшита поделиться корзиной",
+          "additionalProperties": true
+        },
+        "share_link_to_send_cart_pressed": {
+          "type": "object",
+          "description": "Тап на поделиться ссылкой",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "Catalog",
+      "contexts": {
+        "view_catalog": {
+          "type": "object",
+          "description": "Событие, передающее информацию об открытии экрана каталога",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "Checkout",
+      "contexts": {
+        "view_checkout_steps": {
+          "type": "object",
+          "description": "отображение конкретного шага \"чекаута по шагам\"",
+          "additionalProperties": true
+        },
+        "info_leave_at_door": {
+          "type": "object",
+          "description": "Показ ботомшит 'как это работает'",
+          "additionalProperties": true
+        },
+        "info_leave_at_door_closed": {
+          "type": "object",
+          "description": "Тап на 'понятно' или 'х' в ботомшит 'как это работает'",
+          "additionalProperties": true
+        },
+        "info_leave_at_door_pressed": {
+          "type": "object",
+          "description": "Тап на 'как это работает'",
+          "additionalProperties": true
+        },
+        "leave_at_door_pressed": {
+          "type": "object",
+          "description": "Тап на свитчер 'Оставить заказ у двери'",
+          "additionalProperties": true
+        },
+        "leave_at_door_shown": {
+          "type": "object",
+          "description": "Показан свитчер 'Оставить заказ у двери'",
+          "additionalProperties": true
+        },
+        "checkout_tap2_text_shown": {
+          "type": "object",
+          "description": "Отображена нон клик эрия на экране 'выбора адреса и времени' на чекауте ",
+          "additionalProperties": true
+        },
+        "change_settings": {
+          "type": "object",
+          "description": "Событие, передающее информацию о факте внесения изменений в настройки заказа (до оформления заказа).",
+          "additionalProperties": true
+        },
+        "checkout_error": {
+          "type": "object",
+          "description": "Событие, передающее информацию о возникшей ошибке",
+          "additionalProperties": true
+        },
+        "complete_docs_step": {
+          "type": "object",
+          "description": "'Прохождение' шага 'Документы'",
+          "additionalProperties": true
+        },
+        "complete_payment_step": {
+          "type": "object",
+          "description": "'Прохождение' шага 'Оплата'",
+          "additionalProperties": true
+        },
+        "complete_receiving_step": {
+          "type": "object",
+          "description": "'Прохождение' шага 'Получение'",
+          "additionalProperties": true
+        },
+        "complete_replacement_step": {
+          "type": "object",
+          "description": "'Прохождение' шага 'Замены'",
+          "additionalProperties": true
+        },
+        "open_checkout_step": {
+          "type": "object",
+          "description": "Отображение конкретного шага 'чекаута по шагам'",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "GiftCards",
+      "contexts": {
+        "add_cards_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"Добавить набор\"/\"Добавить карту\"",
+          "additionalProperties": true
+        },
+        "adding_card_error": {
+          "type": "object",
+          "description": "Ошибки, возникающие при добавлении карт",
+          "additionalProperties": true
+        },
+        "card_delivery_info_shown": {
+          "type": "object",
+          "description": "Показ инфо о способе получения заказа",
+          "additionalProperties": true
+        },
+        "card_design_popup_closed": {
+          "type": "object",
+          "description": "Закрытие попапа с выбором дизайна карты",
+          "additionalProperties": true
+        },
+        "card_design_popup_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"Выбрать\" в попапе с выбором дизайна карты",
+          "additionalProperties": true
+        },
+        "card_design_popup_shown": {
+          "type": "object",
+          "description": "Отображение попапа с выбором дизайна карты",
+          "additionalProperties": true
+        },
+        "card_step1_complete": {
+          "type": "object",
+          "description": "Клик по кнопке \"Продолжить\" на шаге 1 \"Детали заказа\"",
+          "additionalProperties": true
+        },
+        "card_step2_complete": {
+          "type": "object",
+          "description": "Клик по кнопке \"Продолжить\" на шаге 2 \"Добавление карт\"",
+          "additionalProperties": true
+        },
+        "card_step3_complete": {
+          "type": "object",
+          "description": "Клик по кнопке \"Выставить счет\"/\"Оплатить СБП\" на шаге 3 \"Подтверждение\"",
+          "additionalProperties": true
+        },
+        "contract_popup_closed": {
+          "type": "object",
+          "description": "Закрытие попапа с уточнением о наличии договора",
+          "additionalProperties": true
+        },
+        "contract_popup_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"Да\"/\"Нет\" в попапе с уточнением о наличии договора",
+          "additionalProperties": true
+        },
+        "contract_popup_shown": {
+          "type": "object",
+          "description": "Отображение попапа с уточнением о наличии договора",
+          "additionalProperties": true
+        },
+        "download_order_form": {
+          "type": "object",
+          "description": "Клик по кнопке \"Скачайте\"",
+          "additionalProperties": true
+        },
+        "final_popup_closed": {
+          "type": "object",
+          "description": "Закрытие завершающих попапов",
+          "additionalProperties": true
+        },
+        "final_popup_pressed": {
+          "type": "object",
+          "description": "Клик по кнопкам завершающих попапов",
+          "additionalProperties": true
+        },
+        "final_popup_shown": {
+          "type": "object",
+          "description": "Отображение завершающих попапов",
+          "additionalProperties": true
+        },
+        "invoice_request_popup_closed": {
+          "type": "object",
+          "description": "Закрытие попапа с заявкой на счет",
+          "additionalProperties": true
+        },
+        "invoice_request_popup_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"Отправить\" в попапе с заявкой на счет",
+          "additionalProperties": true
+        },
+        "invoice_request_popup_shown": {
+          "type": "object",
+          "description": "Отображение попапа с заявкой на счет",
+          "additionalProperties": true
+        },
+        "remove_cards_pressed": {
+          "type": "object",
+          "description": "Удаление набора карт/карты",
+          "additionalProperties": true
+        },
+        "select_design_number": {
+          "type": "object",
+          "description": "Клик по кнопке \"Выберите\"",
+          "additionalProperties": true
+        },
+        "start_input": {
+          "type": "object",
+          "description": "Начало ввода данных в обязательные поля формы на шаге 3 \"Подтверждение\"",
+          "additionalProperties": true
+        },
+        "upload_order_form": {
+          "type": "object",
+          "description": "Клик по кнопке \"Загрузите\"",
+          "additionalProperties": true
+        },
+        "add_card": {
+          "type": "object",
+          "description": "Добавление карты",
+          "additionalProperties": true
+        },
+        "add_congratulation_pressed": {
+          "type": "object",
+          "description": "Клик по \"Добавить поздравление\"",
+          "additionalProperties": true
+        },
+        "card_application_error": {
+          "type": "object",
+          "description": "Ошибка при оформлении заявки",
+          "additionalProperties": true
+        },
+        "card_application_start_input": {
+          "type": "object",
+          "description": "Начало ввода данных в поля формы",
+          "additionalProperties": true
+        },
+        "card_application_submit": {
+          "type": "object",
+          "description": "Клик по активной кнопке оплаты",
+          "additionalProperties": true
+        },
+        "card_delivery_time_pressed": {
+          "type": "object",
+          "description": "Клик по табу с временем отправки",
+          "additionalProperties": true
+        },
+        "card_design_pressed": {
+          "type": "object",
+          "description": "Клик по плитке с дизайном карты",
+          "additionalProperties": true
+        },
+        "card_nominal_value_pressed": {
+          "type": "object",
+          "description": "Клик по плитке с номиналом карты",
+          "additionalProperties": true
+        },
+        "card_recipient_pressed": {
+          "type": "object",
+          "description": "Клик по неактивному табу с получателем",
+          "additionalProperties": true
+        },
+        "remove_card": {
+          "type": "object",
+          "description": "Удаление карты",
+          "additionalProperties": true
+        },
+        "card_balance_shown": {
+          "type": "object",
+          "description": "Показ баланса карты",
+          "additionalProperties": true
+        },
+        "check_card_balance": {
+          "type": "object",
+          "description": "Клик по кнопке \"Проверить\"/\"Проверить еще раз\"",
+          "additionalProperties": true
+        },
+        "checking_card_balance_error": {
+          "type": "object",
+          "description": "Ошибки при проверке баланса",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "Landing",
+      "contexts": {
+        "landing_anchor_pressed": {
+          "type": "object",
+          "description": "Клик на элемент, в который вшита ссылка с якорем",
+          "additionalProperties": true
+        },
+        "landing_anchor_shown": {
+          "type": "object",
+          "description": "Просмотр блока с якорем",
+          "additionalProperties": true
+        },
+        "landing_close_accordion": {
+          "type": "object",
+          "description": "Закрытие аккордеона",
+          "additionalProperties": true
+        },
+        "landing_element_pressed": {
+          "type": "object",
+          "description": "Клик на активный элемент без ссылок",
+          "additionalProperties": true
+        },
+        "landing_link_pressed": {
+          "type": "object",
+          "description": "Клик по ссылке",
+          "additionalProperties": true
+        },
+        "landing_open_accordion": {
+          "type": "object",
+          "description": "Открытие аккордеона",
+          "additionalProperties": true
+        },
+        "landing_pop_up_shown": {
+          "type": "object",
+          "description": "Открытие попапа",
+          "additionalProperties": true
+        },
+        "landing_tab_pressed": {
+          "type": "object",
+          "description": "Клик по неактивному табу",
+          "additionalProperties": true
+        },
+        "landing_use_slider": {
+          "type": "object",
+          "description": "Взаимодействие со слайдером",
+          "additionalProperties": true
+        },
+        "landing_form_calendar_date_pressed": {
+          "type": "object",
+          "description": "Клик по дате в календаре",
+          "additionalProperties": true
+        },
+        "landing_form_checkbox_pressed": {
+          "type": "object",
+          "description": "Взаимодействие с чекбоксом",
+          "additionalProperties": true
+        },
+        "landing_form_dropdown_list_pressed": {
+          "type": "object",
+          "description": "Открытие выпадающего списка",
+          "additionalProperties": true
+        },
+        "landing_form_dropdown_option_pressed": {
+          "type": "object",
+          "description": "Выбор в выпадающем списке",
+          "additionalProperties": true
+        },
+        "landing_form_input_pressed": {
+          "type": "object",
+          "description": "Активация поля формы",
+          "additionalProperties": true
+        },
+        "landing_form_sent_error": {
+          "type": "object",
+          "description": "Ошибка при отправке формы",
+          "additionalProperties": true
+        },
+        "landing_form_sent_success": {
+          "type": "object",
+          "description": "Успешная отправка формы",
+          "additionalProperties": true
+        },
+        "landing_form_submit_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке отправки формы",
+          "additionalProperties": true
+        },
+        "landing_form_upload_file_pressed": {
+          "type": "object",
+          "description": "Клик на кнопку загрузки файла",
+          "additionalProperties": true
+        },
+        "landing_form_upload_file_success": {
+          "type": "object",
+          "description": "Успешная загрузка файла",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "Loyalty",
+      "contexts": {
+        "loyalty_about_pressed": {
+          "type": "object",
+          "description": "Нажатие на кнопку 'О программе'",
+          "additionalProperties": true
+        },
+        "loyalty_card_copy": {
+          "type": "object",
+          "description": "Копирование номера карты на экране 'Карта OBI CLUB' или модальном окне 'Карта OBI CLUB'",
+          "additionalProperties": true
+        },
+        "loyalty_card_zoom": {
+          "type": "object",
+          "description": "Нажатие на штрихкод карты для открытия модального окна со штрихкодом",
+          "additionalProperties": true
+        },
+        "view_card_obi_club": {
+          "type": "object",
+          "description": "Открытие экрана 'Карта OBI CLUB'",
+          "additionalProperties": true
+        },
+        "club_zoo_exit_error": {
+          "type": "object",
+          "description": "Ошибка выхода из зооклуба",
+          "additionalProperties": true
+        },
+        "club_zoo_exit_pressed": {
+          "type": "object",
+          "description": "Тап на кнопку 'Выйти'",
+          "additionalProperties": true
+        },
+        "club_zoo_exit_success": {
+          "type": "object",
+          "description": "Успешный выход из зооклуба",
+          "additionalProperties": true
+        },
+        "club_zoo_faq_pressed": {
+          "type": "object",
+          "description": "Тап на блок 'Вопросы и ответы'",
+          "additionalProperties": true
+        },
+        "club_zoo_join_error": {
+          "type": "object",
+          "description": "Ошибка вступления в зооклуб",
+          "additionalProperties": true
+        },
+        "club_zoo_join_pressed": {
+          "type": "object",
+          "description": "Тап на кнопку 'Вступить в клуб'",
+          "additionalProperties": true
+        },
+        "club_zoo_join_success": {
+          "type": "object",
+          "description": "Успешное вступления в зооклуб",
+          "additionalProperties": true
+        },
+        "club_zoo_pet_add_pressed": {
+          "type": "object",
+          "description": "Тап на активную кнопку 'Добавить' в блоке 'Мои питомцы'",
+          "additionalProperties": true
+        },
+        "view_club_zoo": {
+          "type": "object",
+          "description": "Открытие экрана 'Усатый клуб'",
+          "additionalProperties": true
+        },
+        "coupon_activate": {
+          "type": "object",
+          "description": "Тап на кнопку \"Активировать\"",
+          "additionalProperties": true
+        },
+        "coupon_activate_error": {
+          "type": "object",
+          "description": "Ошибка активации купона.",
+          "additionalProperties": true
+        },
+        "coupon_activate_success": {
+          "type": "object",
+          "description": "Успех активации купона",
+          "additionalProperties": true
+        },
+        "coupon_button_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"Перейти на сайт партнера\" в деталке купона",
+          "additionalProperties": true
+        },
+        "coupon_copy": {
+          "type": "object",
+          "description": "Клик по кнопке \"Копировать\" в деталке купона",
+          "additionalProperties": true
+        },
+        "coupon_copy_success": {
+          "type": "object",
+          "description": "Промокод успешно скопирован",
+          "additionalProperties": true
+        },
+        "coupon_delete": {
+          "type": "object",
+          "description": "Клик по кнопке \"Удалить\" в попапе купона",
+          "additionalProperties": true
+        },
+        "coupon_delete_error": {
+          "type": "object",
+          "description": "Ошибка удаления купона",
+          "additionalProperties": true
+        },
+        "coupon_delete_no": {
+          "type": "object",
+          "description": "Клик по кнопке \"Нет\" в попапе удаления купона",
+          "additionalProperties": true
+        },
+        "coupon_delete_success": {
+          "type": "object",
+          "description": "Успешное удаление купона",
+          "additionalProperties": true
+        },
+        "coupon_delete_yes": {
+          "type": "object",
+          "description": "Клик по кнопке \"Да\" в попапе удаления купона",
+          "additionalProperties": true
+        },
+        "coupon_pressed": {
+          "type": "object",
+          "description": "Тапе на ячейку купона / кнопку 'Показать' у купона",
+          "additionalProperties": true
+        },
+        "coupons_all_pressed": {
+          "type": "object",
+          "description": "Тап на кнопку \"Смотреть все\" в карусели \"Купоны и промокоды\"",
+          "additionalProperties": true
+        },
+        "coupons_error": {
+          "type": "object",
+          "description": "Ошибка получения купонов.",
+          "additionalProperties": true
+        },
+        "coupon_show_less_pressed": {
+          "type": "object",
+          "description": "Клик по \"Скрыть\" в деталке купона",
+          "additionalProperties": true
+        },
+        "coupon_show_more_pressed": {
+          "type": "object",
+          "description": "Клик по \"Показать полностью\" в деталке купона",
+          "additionalProperties": true
+        },
+        "coupon_shown": {
+          "type": "object",
+          "description": "Показ ячейки купона на экране",
+          "additionalProperties": true
+        },
+        "coupons_shown": {
+          "type": "object",
+          "description": "Показ карусели \"Купоны и промокоды\"",
+          "additionalProperties": true
+        },
+        "coupons_use_slider": {
+          "type": "object",
+          "description": "Прокручивание карусели \"Купоны и промокоды\"",
+          "additionalProperties": true
+        },
+        "coupon_tab_pressed": {
+          "type": "object",
+          "description": "Тап на таб \"Купоны\"",
+          "additionalProperties": true
+        },
+        "game_offer_tab_pressed": {
+          "type": "object",
+          "description": "Тап на таб \"Лентомания\"",
+          "additionalProperties": true
+        },
+        "give_coupon_button_pressed": {
+          "type": "object",
+          "description": "Тап на кнопку \"Подарить купон\" в деталке купона",
+          "additionalProperties": true
+        },
+        "promo_code_tab_pressed": {
+          "type": "object",
+          "description": "Тап на таб \"Партнеры\"",
+          "additionalProperties": true
+        },
+        "scratch_card_tab_pressed": {
+          "type": "object",
+          "description": "Тап на таб \"Карты-сюрприз\"",
+          "additionalProperties": true
+        },
+        "view_coupon": {
+          "type": "object",
+          "description": "Открытие детального экрана купона",
+          "additionalProperties": true
+        },
+        "categories_selection_shown": {
+          "type": "object",
+          "description": "Показ экрана выбора любимых категорий",
+          "additionalProperties": true
+        },
+        "view_loyalty_reg": {
+          "type": "object",
+          "description": "Событие просмотра страницы дорегистрации",
+          "additionalProperties": true
+        },
+        "favorite_categories_pressed": {
+          "type": "object",
+          "description": "Тап на виджет Любимые категории",
+          "additionalProperties": true
+        },
+        "favorite_categories_shown": {
+          "type": "object",
+          "description": "Показ виджета Любимые категории",
+          "additionalProperties": true
+        },
+        "loyalty_activation": {
+          "type": "object",
+          "description": "Отправляется одновременно с favorite_categories_pressed, если по виджету будет открыт экран дорегистрации",
+          "additionalProperties": true
+        },
+        "select_categories_pressed": {
+          "type": "object",
+          "description": "Отправляется одновременно с favorite_categories_pressed, если по виджету будет открыт экран Любимые категории",
+          "additionalProperties": true
+        },
+        "accrual_history_date_confirm": {
+          "type": "object",
+          "description": "Клик на активную кнопку \"Подтвердить\" в попапе выбора даты",
+          "additionalProperties": true
+        },
+        "accrual_history_date_pressed": {
+          "type": "object",
+          "description": "Клик на окошко с датой  в истории начислений баллов",
+          "additionalProperties": true
+        },
+        "accrual_history_operation_pressed": {
+          "type": "object",
+          "description": "Клик на вариант в дропдауне типа операции",
+          "additionalProperties": true
+        },
+        "accrual_history_page_pressed": {
+          "type": "object",
+          "description": "Клик на номер страницы в истории начислений баллов",
+          "additionalProperties": true
+        },
+        "accrual_history_show_more_pressed": {
+          "type": "object",
+          "description": "Клик на \"Показать еще\" в истории начислений баллов ",
+          "additionalProperties": true
+        },
+        "accrual_history_show_pressed": {
+          "type": "object",
+          "description": "Клик на кнопку \"Показать\" в мобильной верстке",
+          "additionalProperties": true
+        },
+        "points_block_shown": {
+          "type": "object",
+          "description": "Показ блока с баллами",
+          "additionalProperties": true
+        },
+        "points_tooltip_shown": {
+          "type": "object",
+          "description": "Показ сообщения по наведению на 'i'",
+          "additionalProperties": true
+        },
+        "loyalty_detail_pressed": {
+          "type": "object",
+          "description": "Нажатие на блок с уровнем кешбэка",
+          "additionalProperties": true
+        },
+        "points_balance_pressed": {
+          "type": "object",
+          "description": "Нажатие на кнопку 'Операции с бонусами'",
+          "additionalProperties": true
+        },
+        "points_filter_pressed": {
+          "type": "object",
+          "description": "Выбор фильтра (нажатие на невыбранный фильтр)",
+          "additionalProperties": true
+        },
+        "view_accrual_history": {
+          "type": "object",
+          "description": "Открытие экрана 'Операции с бонусами'",
+          "additionalProperties": true
+        },
+        "add_pet_completed": {
+          "type": "object",
+          "description": "Нажатие на кнопку 'Готово' на Шаге 3 / Шаге 4",
+          "additionalProperties": true
+        },
+        "pet_breed_pressed": {
+          "type": "object",
+          "description": "Нажатие на плитку с породой",
+          "additionalProperties": true
+        },
+        "pet_type_pressed": {
+          "type": "object",
+          "description": "Нажатие на плитку с типом питомца",
+          "additionalProperties": true
+        },
+        "view_add_pet_about": {
+          "type": "object",
+          "description": "Показан Шаг 3. Расскажите о питомце подробнее",
+          "additionalProperties": true
+        },
+        "view_add_pet_breed": {
+          "type": "object",
+          "description": "Показан Шаг 2. Какой породы ваша кошка / собака?",
+          "additionalProperties": true
+        },
+        "view_add_pet_properties": {
+          "type": "object",
+          "description": "Показан Шаг 4. Какие есть особенности у вашей кошки/собаки?",
+          "additionalProperties": true
+        },
+        "view_add_pet_type": {
+          "type": "object",
+          "description": "Показан Шаг 1. Какой у вас питомец?",
+          "additionalProperties": true
+        },
+        "poffer_activate_error": {
+          "type": "object",
+          "description": "Ошибка активации ПП",
+          "additionalProperties": true
+        },
+        "poffer_activate_pressed": {
+          "type": "object",
+          "description": "Тап на кнопку 'Активировать' у ПП в карусели/листинге “Персональные предложения”",
+          "additionalProperties": true
+        },
+        "poffer_delivery_tab_pressed": {
+          "type": "object",
+          "description": "Тап на таб \"Доставка\" в карусели/листинге \"Персональные предложения\"",
+          "additionalProperties": true
+        },
+        "poffer_pickup_tab_pressed": {
+          "type": "object",
+          "description": "Тап на таб \"Магазин и самовывоз\" в карусели/листинге \"Персональные предложения\"",
+          "additionalProperties": true
+        },
+        "poffer_pressed": {
+          "type": "object",
+          "description": "Тап на ячейку ПП для открытия детального экрана ПП",
+          "additionalProperties": true
+        },
+        "poffers_all_pressed": {
+          "type": "object",
+          "description": "Тап на кнопку \"Показать все\" в карусели \"Персональные предложения\"",
+          "additionalProperties": true
+        },
+        "poffer_shown": {
+          "type": "object",
+          "description": "Показ ячейки ПП на экране",
+          "additionalProperties": true
+        },
+        "poffers_shown": {
+          "type": "object",
+          "description": "Показ карусели \"Персональные предложения\"",
+          "additionalProperties": true
+        },
+        "poffers_use_slider": {
+          "type": "object",
+          "description": "Прокручивание карусели \"Персональные предложения\"",
+          "additionalProperties": true
+        },
+        "birth_loyalty_pressed": {
+          "type": "object",
+          "description": "Событие активации поля ввода даты рождения в форме дорегистрации.",
+          "additionalProperties": true
+        },
+        "confirm_birth_loyalty_pressed": {
+          "type": "object",
+          "description": "Событие нажатия на кнопку 'Выбрать' для подтверждения даты рождения.",
+          "additionalProperties": true
+        },
+        "email_loyalty_pressed": {
+          "type": "object",
+          "description": "Событие активации поля ввода email в форме дорегистрации.",
+          "additionalProperties": true
+        },
+        "loyalty_reg_user_update": {
+          "type": "object",
+          "description": "Событие успешного прохождения дорегистрации.",
+          "additionalProperties": true
+        },
+        "loyalty_reg_user_update_error": {
+          "type": "object",
+          "description": "Событие ошибки прохождения дорегистрации.",
+          "additionalProperties": true
+        },
+        "name_loyalty_pressed": {
+          "type": "object",
+          "description": "Событие активации поля ввода имени в форме дорегистрации.",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "MI",
+      "contexts": {
+        "view_action": {
+          "type": "object",
+          "description": "Открытие детальной страницы акции",
+          "additionalProperties": true
+        },
+        "view_listing_mi": {
+          "type": "object",
+          "description": "Открытие экрана листинга каталога при переходе по маркетинговому инструменту",
+          "additionalProperties": true
+        },
+        "view_promoaction_list": {
+          "type": "object",
+          "description": "Открытие раздела акций",
+          "additionalProperties": true
+        },
+        "banner_cell_pressed": {
+          "type": "object",
+          "description": "Клик по баннеру из сета баннеров на странице акции",
+          "additionalProperties": true
+        },
+        "banner_cell_shown": {
+          "type": "object",
+          "description": "Показ одного баннера из сета баннеров на странице акции",
+          "additionalProperties": true
+        },
+        "banner_pressed": {
+          "type": "object",
+          "description": "Клик по баннеру из карусели баннеров / скрываемому баннеру",
+          "additionalProperties": true
+        },
+        "banner_shown": {
+          "type": "object",
+          "description": "Показ баннера из карусели баннеров / скрываемого баннера",
+          "additionalProperties": true
+        },
+        "category_carousel_pressed": {
+          "type": "object",
+          "description": "Клик по миру в карусели миров (кнопок со ссылками)",
+          "additionalProperties": true
+        },
+        "category_carousel_shown": {
+          "type": "object",
+          "description": "Показ одного мира в карусели миров (кнопок со ссылками)",
+          "additionalProperties": true
+        },
+        "combo_add_to_cart": {
+          "type": "object",
+          "description": "Добавление/увеличение количества комбо в корзине по нажатию на кнопку “В корзину” / “+” с карусели комбо",
+          "additionalProperties": true
+        },
+        "combo_carousel_pressed": {
+          "type": "object",
+          "description": "Тап по кнопке Все у карусели комбо",
+          "additionalProperties": true
+        },
+        "combo_carousel_shown": {
+          "type": "object",
+          "description": "Показ карусели комбо",
+          "additionalProperties": true
+        },
+        "combo_detail_out_of_stock": {
+          "type": "object",
+          "description": "Событие отправляется в момент, когда на модальном окне комбо показано уведомление с котом Комбо закончилось",
+          "additionalProperties": true
+        },
+        "view_combo": {
+          "type": "object",
+          "description": "Показ ячейки комбо в листинге комбо/каруселях",
+          "additionalProperties": true
+        },
+        "view_combo_detail": {
+          "type": "object",
+          "description": "Открытие модального окна комбо",
+          "additionalProperties": true
+        },
+        "view_combo_list": {
+          "type": "object",
+          "description": "Открытие модального окна с листингом комбо / листинга комбо",
+          "additionalProperties": true
+        },
+        "favorite_categories_carousel_pressed": {
+          "type": "object",
+          "description": "Тап на кнопку \"Все >\" у виджета Товары любимых категорий на Главном экране",
+          "additionalProperties": true
+        },
+        "favorite_categories_carousel_shown": {
+          "type": "object",
+          "description": "Показ виджета Товары любимых категорий на Главном экране",
+          "additionalProperties": true
+        },
+        "carousel_pressed": {
+          "type": "object",
+          "description": "Переход по товарной карусели (кнопка 'Показать все')",
+          "additionalProperties": true
+        },
+        "carousel_shown": {
+          "type": "object",
+          "description": "Показ товарной карусели",
+          "additionalProperties": true
+        },
+        "main_page_shown": {
+          "type": "object",
+          "description": "Открытие главного экрана после успешной загрузки",
+          "additionalProperties": true
+        },
+        "popup_default_store_closed": {
+          "type": "object",
+          "description": "Закрытие попапа выбора магазина по крестику",
+          "additionalProperties": true
+        },
+        "popup_default_store_shown": {
+          "type": "object",
+          "description": "Открытие попапа выбора магазина",
+          "additionalProperties": true
+        },
+        "popup_message_closed": {
+          "type": "object",
+          "description": "закрытие popup",
+          "additionalProperties": true
+        },
+        "popup_message_pressed": {
+          "type": "object",
+          "description": "переход по попапу",
+          "additionalProperties": true
+        },
+        "popup_message_shown": {
+          "type": "object",
+          "description": "события показа попапапа",
+          "additionalProperties": true
+        },
+        "error_view_recommendations": {
+          "type": "object",
+          "description": "Ошибка формирования подборки",
+          "additionalProperties": true
+        },
+        "view_recommendations": {
+          "type": "object",
+          "description": "Отображение рекомендаций",
+          "additionalProperties": true
+        },
+        "stories_closed": {
+          "type": "object",
+          "description": "Закрытие детального экрана сторис",
+          "additionalProperties": true
+        },
+        "stories_pressed": {
+          "type": "object",
+          "description": "Переход со сторис",
+          "additionalProperties": true
+        },
+        "stories_shown": {
+          "type": "object",
+          "description": "Показ карусели со stories",
+          "additionalProperties": true
+        },
+        "stories_use_slider": {
+          "type": "object",
+          "description": "Прокручивание карусели со stories",
+          "additionalProperties": true
+        },
+        "view_stories": {
+          "type": "object",
+          "description": "Показ детального экрана stories",
+          "additionalProperties": true
+        },
+        "waterfall_goods_end": {
+          "type": "object",
+          "description": "Достигнут конец водопада товаров",
+          "additionalProperties": true
+        },
+        "waterfall_goods_scroll": {
+          "type": "object",
+          "description": "Скролл водопада товаров",
+          "additionalProperties": true
+        },
+        "waterfall_goods_shown": {
+          "type": "object",
+          "description": "Показ водопада товаров.Начало показа",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "Notification",
+      "contexts": {
+        "email_approve_pressed": {
+          "type": "object",
+          "description": "события включения / отключения чекбокса на уведомление",
+          "additionalProperties": true
+        },
+        "notification_settings_pressed": {
+          "type": "object",
+          "description": "события включения / отключения чекбокса на уведомление",
+          "additionalProperties": true
+        },
+        "notification_settings_pressed_error": {
+          "type": "object",
+          "description": "событие ошибок при включении отключении уведомлений",
+          "additionalProperties": true
+        },
+        "phone_setting_pressed": {
+          "type": "object",
+          "description": "Нажатие на кнопку перейти в настройки уведомлений в телефоне",
+          "additionalProperties": true
+        },
+        "view_notification_settings": {
+          "type": "object",
+          "description": "события просмотра экрана настройки получения уведомлений",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "Order",
+      "contexts": {
+        "complete_editing": {
+          "type": "object",
+          "description": "Успешное завершение редактирования заказа",
+          "additionalProperties": true
+        },
+        "about_order_pressed": {
+          "type": "object",
+          "description": "тап на стики на главном экране/тап на заказ в bottom sheet",
+          "additionalProperties": true
+        },
+        "order_detail_pressed": {
+          "type": "object",
+          "description": "Тап на подробнее на статусе заказа",
+          "additionalProperties": true
+        },
+        "repeat_order_pressed": {
+          "type": "object",
+          "description": "Тап на Повторить заказ",
+          "additionalProperties": true
+        },
+        "view_order_status": {
+          "type": "object",
+          "description": "Открыт экран 'статус заказа'",
+          "additionalProperties": true
+        },
+        "complete_purchase": {
+          "type": "object",
+          "description": "Заказ создан",
+          "additionalProperties": true
+        },
+        "complete_purchase_item": {
+          "type": "object",
+          "description": "Данные по товарам в созданном заказе",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "Payments",
+      "contexts": {
+        "add_new_card_pressed": {
+          "type": "object",
+          "description": "Тап на \"Новый картой онлайн\"",
+          "additionalProperties": true
+        },
+        "add_new_payment_method_error": {
+          "type": "object",
+          "description": "Ошибка при новой привязке способа оплаты",
+          "additionalProperties": true
+        },
+        "add_new_payment_method_success": {
+          "type": "object",
+          "description": "Успешная новая привязка способа оплаты",
+          "additionalProperties": true
+        },
+        "add_new_payment_type_pressed": {
+          "type": "object",
+          "description": "тап на \"новый способ оплаты\" (любой новый способ оплаты выбираемый на экранах, где можно добавить привязку (на это СБП/Сберпэй/карта/Я.пей))",
+          "additionalProperties": true
+        },
+        "add_new_sbp_account_pressed": {
+          "type": "object",
+          "description": "Тап на \"Новый СБП счет\"",
+          "additionalProperties": true
+        },
+        "add_new_yapay_account_pressed": {
+          "type": "object",
+          "description": "тап Я.Пей на \"новый способ оплаты\"",
+          "additionalProperties": true
+        },
+        "scan_qr_new_sbp_account_shown": {
+          "type": "object",
+          "description": "Показ QR кода для добавления нового аккаунта СБП",
+          "additionalProperties": true
+        },
+        "view_popup_add_payment_type": {
+          "type": "object",
+          "description": "показан боттомшит с \"новый способ оплаты\"",
+          "additionalProperties": true
+        },
+        "add_email_block_pressed": {
+          "type": "object",
+          "description": "тап на блок сбора email",
+          "additionalProperties": true
+        },
+        "add_email_block_shown": {
+          "type": "object",
+          "description": "показ блока сбора email",
+          "additionalProperties": true
+        },
+        "add_email_save_pressed": {
+          "type": "object",
+          "description": "Тап на кнопку \"Сохранить\"/\"Подтвердить\" на экране \"Добавление email\"",
+          "additionalProperties": true
+        },
+        "error_email_receipts_enable": {
+          "type": "object",
+          "description": "ошибка ввода/сохранения email в блоке сбора email",
+          "additionalProperties": true
+        },
+        "email_receipts_enable_error": {
+          "type": "object",
+          "description": "ошибка ввода/сохранения email в блоке сбора email",
+          "additionalProperties": true
+        },
+        "email_receipts_enable_success": {
+          "type": "object",
+          "description": "Успех сохранения/изменения email в блоке сбора email",
+          "additionalProperties": true
+        },
+        "view_add_email": {
+          "type": "object",
+          "description": "Открыт экран \"Добавление email\"",
+          "additionalProperties": true
+        },
+        "choose_payment_method": {
+          "type": "object",
+          "description": "Выбор способа оплаты (тап на один из уже добавленных)",
+          "additionalProperties": true
+        },
+        "error_payment": {
+          "type": "object",
+          "description": "Ошибка оплаты (после создания заказа: 1. при попытке реальной оплаты заказа. 2. при попытке холдирования средств/списания средств с холда)",
+          "additionalProperties": true
+        },
+        "payment_method_selection_error": {
+          "type": "object",
+          "description": "Тап на \"далее\" если не выбран тип оплаты",
+          "additionalProperties": true
+        },
+        "payment_method_view": {
+          "type": "object",
+          "description": "Просмотр экрана выбора способа оплаты",
+          "additionalProperties": true
+        },
+        "payment_type_change": {
+          "type": "object",
+          "description": "Сохранен измененный способ оплаты(при реальном сохранении)",
+          "additionalProperties": true
+        },
+        "repeat_payment_pressed": {
+          "type": "object",
+          "description": "Тап на \"Повторить оплату\"",
+          "additionalProperties": true
+        },
+        "badge_sbp_checkout_pressed": {
+          "type": "object",
+          "description": "тап на шильдик \"Акция >\"",
+          "additionalProperties": true
+        },
+        "info_sbp_checkout_shown": {
+          "type": "object",
+          "description": "показ Экрана с \"Акция СБП\"",
+          "additionalProperties": true
+        },
+        "badge_yapay_checkout_pressed": {
+          "type": "object",
+          "description": "тап на шильдик \"Акция >\"",
+          "additionalProperties": true
+        },
+        "info_yapay_checkout_shown": {
+          "type": "object",
+          "description": "показ Экрана с \"Описание Я.Пей\"",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "ProductPage",
+      "contexts": {
+        "badge_button_pressed": {
+          "type": "object",
+          "description": "Событие нажатия на кнопку перехода на bottom sheet-е/модальном окне, открытом при нажатии на кликабельный badge в детальной карточке товара.",
+          "additionalProperties": true
+        },
+        "badge_modal_shown": {
+          "type": "object",
+          "description": "Событие показа bottom sheet-а/модального окна при нажатии на кликабельный badge в детальной карточке товара. Событие отправляется при каждом показе bottom sheet-а.",
+          "additionalProperties": true
+        },
+        "badge_pressed": {
+          "type": "object",
+          "description": "Событие нажатия на кликабельный badge в детальной карточке товара. Событие отправляется при каждом нажатии на badge.",
+          "additionalProperties": true
+        },
+        "certificates_link_pressed": {
+          "type": "object",
+          "description": "Событие нажатия на сертификат в bottom sheet-е 'Сертификаты качества'. Событие отправляется при каждом нажатии на сертификат.",
+          "additionalProperties": true
+        },
+        "certificates_link_pressed_error": {
+          "type": "object",
+          "description": "Событие ошибки открытия сертификата в bottom sheet-е 'Сертификаты качества'. Событие отправляется при ошибке открытия сертификата (невозможности открытия ссылки)",
+          "additionalProperties": true
+        },
+        "certificates_pressed": {
+          "type": "object",
+          "description": "Событие нажатия на кнопку 'Сертификаты качества'. Событие отправляется при каждом нажатии на кнопку.",
+          "additionalProperties": true
+        },
+        "certificates_shown": {
+          "type": "object",
+          "description": "Событие показа кнопки 'Сертификаты качества'. Событие отправляется при полном попадании кнопки во viewport.",
+          "additionalProperties": true
+        },
+        "all_reviews_dislike_review": {
+          "type": "object",
+          "description": "Нажатие на дизлайк на ячейке отзыва. Событие отправляется в момент получения 200 на CommentRate.",
+          "additionalProperties": true
+        },
+        "all_reviews_like_review": {
+          "type": "object",
+          "description": "Нажатие на лайк на ячейке отзыва. Отправляется в момент получения 200 на POST /reviews/add.",
+          "additionalProperties": true
+        },
+        "all_reviews_write_review": {
+          "type": "object",
+          "description": "Отправление отзыва при нажатии на 'Отправить отзыв'. Отправляется в момент получения 200 на POST /reviews/add.",
+          "additionalProperties": true
+        },
+        "product_page_write_review": {
+          "type": "object",
+          "description": "Событие нажатия на кнопку 'Оцените товар'.",
+          "additionalProperties": true
+        },
+        "reviews_sorting_change_type": {
+          "type": "object",
+          "description": "Событие выбора нового типа сортировки.",
+          "additionalProperties": true
+        },
+        "reviews_sorting_show_type": {
+          "type": "object",
+          "description": "Событие показа типов сортировки.",
+          "additionalProperties": true
+        },
+        "view_all_reviews_page": {
+          "type": "object",
+          "description": "Открытие экрана 'Отзывы'. Событие отправляется в момент получения 200 на CommentSearch.",
+          "additionalProperties": true
+        },
+        "view_send_reviews_page": {
+          "type": "object",
+          "description": "Открытие модального окна 'Написать отзыв'.",
+          "additionalProperties": true
+        },
+        "size_chart_pressed": {
+          "type": "object",
+          "description": "Событие нажатия на кнопку 'Таблица размеров'.",
+          "additionalProperties": true
+        },
+        "size_chart_shown": {
+          "type": "object",
+          "description": "Событие показа блока с размерной сеткой в детальной карточке товара.",
+          "additionalProperties": true
+        },
+        "multicard_pressed": {
+          "type": "object",
+          "description": "Событие нажатия на значение атрибута в блоке мультикарточки.",
+          "additionalProperties": true
+        },
+        "multicard_shown": {
+          "type": "object",
+          "description": "Событие показа блока мультикарточки на детальной карточке товара.",
+          "additionalProperties": true
+        },
+        "other_categories_shown": {
+          "type": "object",
+          "description": "Просмотр блока “Другие категории с этим товаром”. Отправляется при попадании блока “Другие категории с этим товаром” во viewPort полностью.",
+          "additionalProperties": true
+        },
+        "other_category_pressed": {
+          "type": "object",
+          "description": "Клик на категорию в блоке 'Другие категории с этим товаром'. Отправляется с каждым кликом.",
+          "additionalProperties": true
+        },
+        "product_page_characteristic": {
+          "type": "object",
+          "description": "Событие нажатия на кнопку 'Показать полностью' в разделе 'Характеристики'.",
+          "additionalProperties": true
+        },
+        "product_page_compound": {
+          "type": "object",
+          "description": "Событие нажатия на кнопку 'Показать полностью' в разделе 'Состав'.",
+          "additionalProperties": true
+        },
+        "product_page_description": {
+          "type": "object",
+          "description": "Событие нажатия на кнопку 'Показать полностью' в разделе 'Описание'.",
+          "additionalProperties": true
+        },
+        "view_product_images": {
+          "type": "object",
+          "description": "Событие просмотра изображений или видео товара.",
+          "additionalProperties": true
+        },
+        "view_product_page": {
+          "type": "object",
+          "description": "Показ экрана карточки товара",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "Profile",
+      "contexts": {
+        "accept_alco_terms": {
+          "type": "object",
+          "description": "Активация чекбокса принятия условий в модалке \"Примите условия...\".",
+          "additionalProperties": true
+        },
+        "connect_to_alco_own_needs": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Подключить\".",
+          "additionalProperties": true
+        },
+        "connect_to_alco_own_needs_error": {
+          "type": "object",
+          "description": "Ошибки при подключении (ошибки запроса/сервера).",
+          "additionalProperties": true
+        },
+        "connect_to_alco_own_needs_submit": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Готово\" в модалке \"Примите условия...\".",
+          "additionalProperties": true
+        },
+        "connect_to_alco_own_needs_success": {
+          "type": "object",
+          "description": "Успешный запрос на подключение к покупкам алкоголя для собственных нужд.",
+          "additionalProperties": true
+        },
+        "download_alco_contract": {
+          "type": "object",
+          "description": "Скачивание договора розничной купли-продажи определенных групп товаров.",
+          "additionalProperties": true
+        },
+        "view_alco_own_needs_status": {
+          "type": "object",
+          "description": "Отображение статуса подключения к покупкам алкоголя для собственных нужд.",
+          "additionalProperties": true
+        },
+        "download_doc": {
+          "type": "object",
+          "description": "Скачивание документа",
+          "additionalProperties": true
+        },
+        "search_for_doc": {
+          "type": "object",
+          "description": "Поиск документа",
+          "additionalProperties": true
+        },
+        "show_all_templates": {
+          "type": "object",
+          "description": "Клик по 'Показать все шаблоны'",
+          "additionalProperties": true
+        },
+        "show_less_templates": {
+          "type": "object",
+          "description": "Клик по 'Показать меньше шаблонов'",
+          "additionalProperties": true
+        },
+        "tg_chatbot": {
+          "type": "object",
+          "description": "Клик по ссылке на чат-бот в Telegram",
+          "additionalProperties": true
+        },
+        "view_docs_section": {
+          "type": "object",
+          "description": "Просмотр подраздела документов",
+          "additionalProperties": true
+        },
+        "confirm_edo_operator_pressed": {
+          "type": "object",
+          "description": "Клик по кнопкам \"Подключить\"/\"Назад\" в окне для подтверждения оператора ЭДО",
+          "additionalProperties": true
+        },
+        "confirm_edo_operator_shown": {
+          "type": "object",
+          "description": "Отображение окна для подтверждения оператора ЭДО",
+          "additionalProperties": true
+        },
+        "connect_to_edo_pressed": {
+          "type": "object",
+          "description": "Клик по \"Подключить ЭДО\" в разделе \"Документы\"",
+          "additionalProperties": true
+        },
+        "connect_to_edo_request_success": {
+          "type": "object",
+          "description": "Заявка успешно отправлена",
+          "additionalProperties": true
+        },
+        "connect_to_edo_success": {
+          "type": "object",
+          "description": "Успех подключения",
+          "additionalProperties": true
+        },
+        "enter_guid_pressed": {
+          "type": "object",
+          "description": "Клик по \"Продолжить\" в окне для ввода GUID",
+          "additionalProperties": true
+        },
+        "enter_guid_shown": {
+          "type": "object",
+          "description": "Отображение окна для ввода GUID (флоу ручного подключения)",
+          "additionalProperties": true
+        },
+        "select_edo_operator_pressed": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Продолжить\" в окне для выбора оператора ЭДО",
+          "additionalProperties": true
+        },
+        "select_edo_operator_shown": {
+          "type": "object",
+          "description": "Отображение окна для выбора оператора ЭДО",
+          "additionalProperties": true
+        },
+        "submit_connect_to_edo_update": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Отправить заявку\" в форме корректировки заявки",
+          "additionalProperties": true
+        },
+        "update_connect_to_edo": {
+          "type": "object",
+          "description": "Клик по \"Отправить заявку\" для корректировки заявки",
+          "additionalProperties": true
+        },
+        "view_connect_to_edo_status": {
+          "type": "object",
+          "description": "Просмотр страницы со статусом рассмотрения заявки",
+          "additionalProperties": true
+        },
+        "connect_to_gis": {
+          "type": "object",
+          "description": "Клик по Подключить",
+          "additionalProperties": true
+        },
+        "connect_to_gis_error": {
+          "type": "object",
+          "description": "Ошибки при подключении",
+          "additionalProperties": true
+        },
+        "connect_to_gis_refresh": {
+          "type": "object",
+          "description": "Клик по Обновить",
+          "additionalProperties": true
+        },
+        "connect_to_gis_success": {
+          "type": "object",
+          "description": "Успешный запрос на подключение",
+          "additionalProperties": true
+        },
+        "view_gis_status": {
+          "type": "object",
+          "description": "Отображение статуса подключения к ГИС",
+          "additionalProperties": true
+        },
+        "get_invoice_button_pressed": {
+          "type": "object",
+          "description": "Клик по \"Выставить счет\" в блоке \"Кредитный лимит\" (Вкладка \"Расчетный счет\")",
+          "additionalProperties": true
+        },
+        "get_invoice_error": {
+          "type": "object",
+          "description": "Ошибка выставления счета. Событие отправляется при открытии модального окна \"Не удалось выставить счет\"",
+          "additionalProperties": true
+        },
+        "order_details_pressed": {
+          "type": "object",
+          "description": "Тап по строке заказа. Событие тапа по строке с заказом, открывающее детали заказа",
+          "additionalProperties": true
+        },
+        "payment_schedule_button_pressed": {
+          "type": "object",
+          "description": "Клик по \"График платежей\" в блоке \"Кредитный лимит\" (Вкладка \"Расчетный счет\")",
+          "additionalProperties": true
+        },
+        "payment_schedule_tab_pressed": {
+          "type": "object",
+          "description": "Клик по табу \"График платежей\". Событие отправляется только при клике по неактивному табу",
+          "additionalProperties": true
+        },
+        "replenish_balance_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"Пополнить баланс\"",
+          "additionalProperties": true
+        },
+        "select_all_checkbox": {
+          "type": "object",
+          "description": "Чекбокс \"Выбрать все\". Событие отправляется только при взаимодействии пользователя с чекбоксом",
+          "additionalProperties": true
+        },
+        "select_bill_checkbox": {
+          "type": "object",
+          "description": "Чекбокс выбора платежа. Событие отправляется только при взаимодействии пользователя с чекбоксом. На каждое взаимодействие отдельное событие",
+          "additionalProperties": true
+        },
+        "select_format_button_pressed": {
+          "type": "object",
+          "description": "Клики по кнопкам в попапе \"Выберите формат счетов\"",
+          "additionalProperties": true
+        },
+        "select_format_shown": {
+          "type": "object",
+          "description": "Отображение попапа \"Выберите формат счетов\"",
+          "additionalProperties": true
+        },
+        "separate_bills_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"Выставить отдельные счета\" в разделе \"График платежей\"",
+          "additionalProperties": true
+        },
+        "total_bill_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"Выставить счет\" на 'Итоговая сумма платежа' в разделе \"График платежей\"",
+          "additionalProperties": true
+        },
+        "add_address": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Добавить адрес\"",
+          "additionalProperties": true
+        },
+        "add_banking_details": {
+          "type": "object",
+          "description": "Клик по кнопке \"Добавьте реквизиты\"",
+          "additionalProperties": true
+        },
+        "copy_promo": {
+          "type": "object",
+          "description": "Клик по кнопке копирования промокода",
+          "additionalProperties": true
+        },
+        "delete_address": {
+          "type": "object",
+          "description": "Клик по кнопке удаления адреса",
+          "additionalProperties": true
+        },
+        "edit_address": {
+          "type": "object",
+          "description": "Клик по кнопке редактирования адреса",
+          "additionalProperties": true
+        },
+        "edit_email": {
+          "type": "object",
+          "description": "Клик по кнопке редактирования email",
+          "additionalProperties": true
+        },
+        "edit_email_confirm": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Подтвердить\" при редактировании email",
+          "additionalProperties": true
+        },
+        "payment_options_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"Оплата и реквизиты\"",
+          "additionalProperties": true
+        },
+        "personal_profile_popup_pressed": {
+          "type": "object",
+          "description": "Клик по кнопкам в попапе перехода в личный профиль",
+          "additionalProperties": true
+        },
+        "personal_profile_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"В личный профиль\"",
+          "additionalProperties": true
+        },
+        "profile_close_accordion": {
+          "type": "object",
+          "description": "Клик для закрытия аккордеона",
+          "additionalProperties": true
+        },
+        "profile_open_accordion": {
+          "type": "object",
+          "description": "Клик для открытия аккордеона",
+          "additionalProperties": true
+        },
+        "promo_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке промо",
+          "additionalProperties": true
+        },
+        "resend_email": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Отправить повторно\" для подтверждения email",
+          "additionalProperties": true
+        },
+        "search_address": {
+          "type": "object",
+          "description": "Тап по полю поиска адреса",
+          "additionalProperties": true
+        },
+        "show_all_addresses": {
+          "type": "object",
+          "description": "Клик по кнопке \"Показать все адреса\"",
+          "additionalProperties": true
+        },
+        "show_all_faq": {
+          "type": "object",
+          "description": "Клик по кнопке \"Все вопросы и ответы\"",
+          "additionalProperties": true
+        },
+        "side_menu_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке в боковом меню",
+          "additionalProperties": true
+        },
+        "get_reconciliation_report": {
+          "type": "object",
+          "description": "Клик на кнопку \"Заказать акт сверки\"",
+          "additionalProperties": true
+        },
+        "order_reconciliation_report": {
+          "type": "object",
+          "description": "Клик на кнопку \"Заказать\" в окне заказа акта сверки",
+          "additionalProperties": true
+        },
+        "reconciliation_report_success": {
+          "type": "object",
+          "description": "Показ уведомления об успешном заказе акта сверки",
+          "additionalProperties": true
+        },
+        "copy_link_pressed": {
+          "type": "object",
+          "description": "Клик по 'Скопировать ссылку'",
+          "additionalProperties": true
+        },
+        "learn_more_pressed": {
+          "type": "object",
+          "description": "Клик по 'Узнать больше'",
+          "additionalProperties": true
+        },
+        "referral_program_shown": {
+          "type": "object",
+          "description": "Просмотр блока реферальной программы",
+          "additionalProperties": true
+        },
+        "add_user_confirm_pressed": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Добавить пользователя\" в модальном окне подключения нового пользователя",
+          "additionalProperties": true
+        },
+        "add_user_pressed": {
+          "type": "object",
+          "description": "Клик по \"Добавить\" (пользователя)",
+          "additionalProperties": true
+        },
+        "delete_user_confirm_pressed": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Удалить\" в модальном окне удаления пользователя",
+          "additionalProperties": true
+        },
+        "delete_user_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке удаления пользователя",
+          "additionalProperties": true
+        },
+        "edit_user_confirm_pressed": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Перейти\" в модальном окне перехода в личный профиль",
+          "additionalProperties": true
+        },
+        "edit_user_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке редактирования данных о пользователе",
+          "additionalProperties": true
+        },
+        "leave_company_confirm_pressed": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Покинуть\" в модальном окне покидания компании",
+          "additionalProperties": true
+        },
+        "leave_company_pressed": {
+          "type": "object",
+          "description": "Клик по \"Покинуть компанию\"",
+          "additionalProperties": true
+        },
+        "replace_admin_confirm_pressed": {
+          "type": "object",
+          "description": "Клик по активной кнопке \"Подтвердить\" в модальном окне выбора нового администратора",
+          "additionalProperties": true
+        },
+        "replace_admin_pressed": {
+          "type": "object",
+          "description": "Клик по \"Изменить администратора\"",
+          "additionalProperties": true
+        },
+        "show_all_users_pressed": {
+          "type": "object",
+          "description": "Клик по кнопке \"Показать всех пользователей\"",
+          "additionalProperties": true
+        }
+      }
+    },
+    {
+      "name": "Recomendations",
+      "contexts": {
+        "error_forgotten_items": {
+          "type": "object",
+          "description": "Ошибка загрузки страницы \"Подобрали для вас\"",
+          "additionalProperties": true
+        },
+        "forgotten_items_closed": {
+          "type": "object",
+          "description": "Закрытие страницы \"Подобрали для вас\"",
+          "additionalProperties": true
+        },
+        "forgotten_items_pressed": {
+          "type": "object",
+          "description": "Тап на кнопку на экране \"Подобрали для вас\"",
+          "additionalProperties": true
+        },
+        "view_forgotten_items": {
+          "type": "object",
+          "description": "Просмотр страницы \"Подобрали для вас\"",
+          "additionalProperties": true
+        }
+      }
+    }
+  ]
+}

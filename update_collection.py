@@ -114,7 +114,11 @@ def login(session):
             return False
             
         # 6. Exchange the code for a Standupscore session
-        token_res = session.post("https://standupscore.com/api/auth/token", json={"code": code})
+        payload = {"code": code, "state": state, "redirect_uri": redirect_uri}
+        logging.info(f"Sending payload to auth/token: {payload}")
+        token_res = session.post("https://standupscore.com/api/auth/token", json=payload)
+        if token_res.status_code != 200:
+            logging.error(f"Token error: {token_res.status_code} - {token_res.text}")
         token_res.raise_for_status()
         
         access_token = token_res.json().get("access_token")
